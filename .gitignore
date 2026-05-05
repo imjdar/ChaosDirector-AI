@@ -16,7 +16,7 @@ ChaosDirector/cache/
 **/*.py[cod]
 **/*$py.class
 brain/venv/
-brain/.env
+*.env
 ChaosDirector/brain/.env
 
 # Java/Maven/Gradle

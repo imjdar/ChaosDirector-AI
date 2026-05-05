@@ -1,0 +1,11 @@
+name: ChaosDirector
+version: '1.0'
+main: com.chaosdirector.plugin.ChaosPlugin
+api-version: '1.21'
+author: Chaos AI
+description: Plugin that communicates with the ChaosDirector AI brain.
+commands:
+  chaos:
+    description: Controla la IA
+    usage: /chaos <start|stop>
+    permission: op
