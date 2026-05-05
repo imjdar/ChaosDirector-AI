@@ -2,6 +2,7 @@
 .docker/
 docker-compose.override.yml
 playit/
+ChaosDirector/plugins/
 
 # Minecraft Server Data (Volumes)
 ChaosDirector/world/
@@ -9,11 +10,6 @@ ChaosDirector/world_nether/
 ChaosDirector/world_the_end/
 ChaosDirector/logs/
 ChaosDirector/cache/
-ChaosDirector/plugins/Chunky/
-ChaosDirector/plugins/ClearLag/
-ChaosDirector/plugins/spark/
-ChaosDirector/plugins/bStats/
-ChaosDirector/plugins/Apollo-Bukkit/
 
 # Python (Brain)
 **/__pycache__/
@@ -21,14 +17,20 @@ ChaosDirector/plugins/Apollo-Bukkit/
 **/*$py.class
 brain/venv/
 brain/.env
+ChaosDirector/brain/.env
 
 # Java/Maven/Gradle
 **/target/
 **/build/
 **/.gradle/
+
+# --- REGLA DE PLUGINS ---
+# Ignoramos todos los JARs por defecto
 **/*.jar
-!tmv4-1.2.0.jar
-!playit-minecraft-plugin.jar
+
+# SOLO permitimos los plugins que hemos desarrollado/editado nosotros
+!ChaosDirector/plugins/ChaosPlugin-1.0.jar
+!ChaosDirector/plugins/UHCScenarios.jar
 
 # IDEs
 .idea/
