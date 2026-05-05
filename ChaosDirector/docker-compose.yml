@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # 1. El Servidor de Minecraft (Paper 1.21)
+  minecraft:
+    image: itzg/minecraft-server
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      VERSION: "1.21.1"
+      MEMORY: "4G"
+      MODRINTH_PROJECTS: "chunky"
+      SPIGET_RESOURCES: "68271" # ClearLag
+    volumes:
+      - mc_data:/data
+      - ./plugins:/data/plugins
+    restart: unless-stopped
+
+  # 2. Servidor SFTP (Para subir tus plugins)
+  sftp:
+    image: atmoz/sftp
+    volumes:
+      - mc_data:/home/admin/minecraft
+    ports:
+      - "2222:22"
+    # Usuario: admin | Contraseña: password123 | UID: 1000 (para permisos)
+    command: admin:password123:1000
+    restart: unless-stopped
+
+  # 3. El Cerebro (Python API)
+  ia-brain:
+    build: ./brain
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./brain:/app
+    restart: always
+
+volumes:
+  mc_data:

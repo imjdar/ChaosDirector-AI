@@ -1,0 +1,41 @@
+# Docker
+.docker/
+docker-compose.override.yml
+playit/
+
+# Minecraft Server Data (Volumes)
+ChaosDirector/world/
+ChaosDirector/world_nether/
+ChaosDirector/world_the_end/
+ChaosDirector/logs/
+ChaosDirector/cache/
+ChaosDirector/plugins/Chunky/
+ChaosDirector/plugins/ClearLag/
+ChaosDirector/plugins/spark/
+ChaosDirector/plugins/bStats/
+ChaosDirector/plugins/Apollo-Bukkit/
+
+# Python (Brain)
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+brain/venv/
+brain/.env
+
+# Java/Maven/Gradle
+**/target/
+**/build/
+**/.gradle/
+**/*.jar
+!tmv4-1.2.0.jar
+!playit-minecraft-plugin.jar
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db

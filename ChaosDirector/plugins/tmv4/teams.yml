@@ -1,0 +1,39 @@
+teams:
+  d23bca1a-c6cb-4ab2-bab8-493dee8b9e4a:
+    name: LOS3AM
+    color: blue
+    members:
+    - 0a6d7b3d-a404-478e-b0a1-aac0c9b88905
+    - 47d23621-4454-4c7a-baf1-970235cb2a0b
+    friendlyFire: true
+    glowEnabled: true
+    inventory:
+    - ==: org.bukkit.inventory.ItemStack
+      v: 3955
+      type: BIRCH_PLANKS
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null

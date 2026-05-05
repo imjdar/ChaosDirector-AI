@@ -1,0 +1,11 @@
+name: UHCScenarios
+version: '1.0'
+main: com.chaosdirector.uhcscenarios.UHCScenarios
+api-version: '1.21'
+author: ChaosDirector
+description: Scenarios para UHC (CutClean, Fireless)
+commands:
+  uhc:
+    description: Configura los scenarios
+    usage: /uhc <cutclean|fireless>
+    permission: op
